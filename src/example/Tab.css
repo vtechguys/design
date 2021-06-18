@@ -1,0 +1,25 @@
+.TabExample {
+  width: 600px;
+  height: 600px;
+}
+
+.TabExample .TabNavigationButtons {
+  max-height: 50px;
+}
+.TabExample .TabButton,
+.TabExample .TabButton:hover {
+  border-radius: 0;
+  border-width: 2px;
+  border-right-width: 0;
+}
+
+.TabExample .TabButton:last-child {
+  border-right-width: 2px;
+}
+.TabExample .TabButton.tabOpen {
+  color: #fff;
+  background-color: rgb(145, 255, 43);
+}
+.TabExample .TabButton.tabOpen:hover {
+  background-color: rgb(140, 255, 32);
+}

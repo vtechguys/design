@@ -1,0 +1,16 @@
+/* Tab Buttons */
+.ui-c-tabButton {
+  flex-basis: 100px;
+  border-radius: 0px;
+  padding: 8px 16px;
+  text-align: center;
+}
+.ui-c-tabButton.ui-c-tabOpen {
+}
+
+.ui-c-tabContent {
+  display: none;
+}
+.ui-c-tabContent.ui-c-tabOpen {
+  display: block;
+}
