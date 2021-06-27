@@ -1,0 +1,75 @@
+/* Flex.main.css */
+
+/* Breakpoint Flex.css */
+/* Loads css dynamically on breakpoint */
+@import url("./Flex.xs.css") (max-width: 575px);
+@import url("./Flex.sm.css") (min-width: 576px) and (max-width: 767px);
+@import url("./Flex.md.css") (min-width: 768px) and (max-width: 991px);
+@import url("./Flex.lg.css") (min-width: 992px) and (max-width: 1200px);
+@import url("./Flex.xl.css") (min-width: 1201px);
+
+.ui-c-flex {
+  /* 
+    This is just for completion sake,
+    .ui-c-flex.ui-l-flex-* is how we will overcome any specivity
+  */
+}
+
+.ui-c-flex.ui-l-flex--row {
+  flex-direction: row;
+}
+.ui-c-flex.ui-l-flex--row-reverse {
+  flex-direction: row-reverse;
+}
+.ui-c-flex.ui-l-flex--column {
+  flex-direction: column;
+}
+.ui-c-flex.ui-l-flex--column-reverse {
+  flex-direction: column-reverse;
+}
+/* flex-wrap */
+.ui-c-flex.ui-l-flex-wrap--wrap {
+  flex-wrap: wrap;
+}
+.ui-c-flex.ui-l-flex-wrap--nowrap {
+  flex-wrap: nowrap;
+}
+.ui-c-flex.ui-l-flex-wrap--wrap-reverse {
+  flex-wrap: wrap-reverse;
+}
+/* flex-grow */
+.ui-c-flex.ui-l-flex-grow--0 {
+  flex-grow: 0;
+}
+.ui-c-flex.ui-l-flex-grow--1 {
+  flex-grow: 1;
+}
+/* flex-shrink */
+.ui-c-flex.ui-l-flex-shrink--0 {
+  flex-shrink: 0;
+}
+.ui-c-flex.ui-l-flex-shrink--1 {
+  flex-shrink: 1;
+}
+/* justify-content align-items align-content align-self */
+.ui-c-flex.ui-l-justify-content--space-between {
+  justify-content: space-between;
+}
+.ui-c-flex.ui-l-justify-content--space-around {
+  justify-content: space-around;
+}
+.ui-c-flex.ui-l-justify-content--space-evenly {
+  justify-content: space-evenly;
+}
+.ui-c-flex.ui-l-justify-content--center {
+  justify-content: center;
+}
+.ui-c-flex.ui-l-justify-content--flex-start {
+  justify-content: flex-start;
+}
+.ui-c-flex.ui-l-justify-content--flex-end {
+  justify-content: flex-end;
+}
+.ui-c-flex.ui-l-align-items--center {
+  align-items: center;
+}
