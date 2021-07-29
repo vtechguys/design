@@ -1,0 +1,32 @@
+.ui-u-elevation--base {
+    z-index: 0;
+}
+
+.ui-u-elevation--flat {
+    z-index: 1;
+}
+
+.ui-u-elevation--raised {
+    z-index: 2;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+.ui-u-elevation--overlay {
+    z-index: 8;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+}
+
+.ui-u-elevation--sticky-nav {
+    z-index: 12;
+    box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.1);
+}
+
+.ui-u-elevation--temp-nav {
+    z-index: 16;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.1);
+}
+
+.ui-u-elevation--pop-out {
+    z-index: 24;
+    box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.1);
+}

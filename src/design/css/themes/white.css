@@ -1,0 +1,14 @@
+body[data-theme="white"] {
+  --ui-theme-bg: var(--color-white);
+  --ui-theme-interactive-01: var(--color-blue-60);
+  --ui-theme-interactive-02: var(--color-gray-80);
+  --ui-theme-interactive-03: var(--color-blue-60);
+  --ui-theme-interactive-04: var(--color-blue-60);
+  --ui-theme-danger-01: var(--color-red-60);
+  --ui-theme-danger-02: var(--color-red-60);
+  --ui-theme-ui-01: var(--color-gray-10);
+  --ui-theme-ui-02: var(--color-white);
+  --ui-theme-ui-03: var(--color-gray-20);
+  --ui-theme-ui-04: var(--color-gray-50);
+  --ui-theme-ui-05: var(--color-gray-100);
+}

@@ -1,0 +1,253 @@
+@import url("./padding.xs.css") (max-width: 575px);
+@import url("./padding.sm.css") (min-width: 576px) and (max-width: 767px);
+@import url("./padding.md.css") (min-width: 768px) and (max-width: 991px);
+@import url("./padding.lg.css") (min-width: 992px);
+/* pading */
+
+.ui-u-padding--xxs {
+    padding: calc(var(--spacing--02));
+}
+
+.ui-u-padding--gutter {
+    padding: calc(var(--spacing--03));
+}
+
+.ui-u-padding--xs {
+    padding: calc(var(--spacing--04));
+}
+
+.ui-u-padding--sm {
+    padding: calc(var(--spacing--05));
+}
+
+.ui-u-padding--md {
+    padding: calc(var(--spacing--06));
+}
+
+.ui-u-padding--lg {
+    padding: calc(var(--spacing--07));
+}
+
+.ui-u-padding--xl {
+    padding: calc(var(--spacing--08));
+}
+
+.ui-u-padding--xxl {
+    padding: calc(var(--spacing--09));
+}
+
+.ui-u-padding--nova {
+    padding: calc(var(--spacing--10));
+}
+
+.ui-u-padding--galaxy {
+    padding: calc(var(--spacing--11));
+}
+
+.ui-u-padding--universe {
+    padding: calc(var(--spacing--12));
+}
+
+.ui-u-padding--shiva {
+    padding: calc(var(--spacing--13));
+}
+
+/* padding-top */
+
+.ui-u-padding-top--xxs {
+    padding-top: calc(var(--spacing--02));
+}
+
+.ui-u-padding-top--gutter {
+    padding-top: calc(var(--spacing--03));
+}
+
+.ui-u-padding-top--xs {
+    padding-top: calc(var(--spacing--04));
+}
+
+.ui-u-padding-top--sm {
+    padding-top: calc(var(--spacing--05));
+}
+
+.ui-u-padding-top--md {
+    padding-top: calc(var(--spacing--06));
+}
+
+.ui-u-padding-top--lg {
+    padding-top: calc(var(--spacing--07));
+}
+
+.ui-u-padding-top--xl {
+    padding-top: calc(var(--spacing--08));
+}
+
+.ui-u-padding-top--xxl {
+    padding-top: calc(var(--spacing--09));
+}
+
+.ui-u-padding-top--nova {
+    padding-top: calc(var(--spacing--10));
+}
+
+.ui-u-padding-top--galaxy {
+    padding-top: calc(var(--spacing--11));
+}
+
+.ui-u-padding-top--universe {
+    padding-top: calc(var(--spacing--12));
+}
+
+.ui-u-padding-top--shiva {
+    padding-top: calc(var(--spacing--13));
+}
+
+/* padding-bottom */
+
+.ui-u-padding-bottom--xxs {
+    padding-bottom: calc(var(--spacing--02));
+}
+
+.ui-u-padding-bottom--gutter {
+    padding-bottom: calc(var(--spacing--03));
+}
+
+.ui-u-padding-bottom--xs {
+    padding-bottom: calc(var(--spacing--04));
+}
+
+.ui-u-padding-bottom--sm {
+    padding-bottom: calc(var(--spacing--05));
+}
+
+.ui-u-padding-bottom--md {
+    padding-bottom: calc(var(--spacing--06));
+}
+
+.ui-u-padding-bottom--lg {
+    padding-bottom: calc(var(--spacing--07));
+}
+
+.ui-u-padding-bottom--xl {
+    padding-bottom: calc(var(--spacing--08));
+}
+
+.ui-u-padding-bottom--xxl {
+    padding-bottom: calc(var(--spacing--09));
+}
+
+.ui-u-padding-bottom--nova {
+    padding-bottom: calc(var(--spacing--10));
+}
+
+.ui-u-padding-bottom--galaxy {
+    padding-bottom: calc(var(--spacing--11));
+}
+
+.ui-u-padding-bottom--universe {
+    padding-bottom: calc(var(--spacing--12));
+}
+
+.ui-u-padding-bottom--shiva {
+    padding-bottom: calc(var(--spacing--13));
+}
+
+/* padding-bottom */
+
+.ui-u-padding-left--xxs {
+    padding-left: calc(var(--spacing--02));
+}
+
+.ui-u-padding-left--gutter {
+    padding-left: calc(var(--spacing--03));
+}
+
+.ui-u-padding-left--xs {
+    padding-left: calc(var(--spacing--04));
+}
+
+.ui-u-padding-left--sm {
+    padding-left: calc(var(--spacing--05));
+}
+
+.ui-u-padding-left--md {
+    padding-left: calc(var(--spacing--06));
+}
+
+.ui-u-padding-left--lg {
+    padding-left: calc(var(--spacing--07));
+}
+
+.ui-u-padding-left--xl {
+    padding-left: calc(var(--spacing--08));
+}
+
+.ui-u-padding-left--xxl {
+    padding-left: calc(var(--spacing--09));
+}
+
+.ui-u-padding-left--nova {
+    padding-left: calc(var(--spacing--10));
+}
+
+.ui-u-padding-left--galaxy {
+    padding-left: calc(var(--spacing--11));
+}
+
+.ui-u-padding-left--universe {
+    padding-left: calc(var(--spacing--12));
+}
+
+.ui-u-padding-left--shiva {
+    padding-left: calc(var(--spacing--13));
+}
+
+/* padding-right */
+
+.ui-u-padding-right--xxs {
+    padding-right: calc(var(--spacing--02));
+}
+
+.ui-u-padding-right--gutter {
+    padding-right: calc(var(--spacing--03));
+}
+
+.ui-u-padding-right--xs {
+    padding-right: calc(var(--spacing--04));
+}
+
+.ui-u-padding-right--sm {
+    padding-right: calc(var(--spacing--05));
+}
+
+.ui-u-padding-right--md {
+    padding-right: calc(var(--spacing--06));
+}
+
+.ui-u-padding-right--lg {
+    padding-right: calc(var(--spacing--07));
+}
+
+.ui-u-padding-right--xl {
+    padding-right: calc(var(--spacing--08));
+}
+
+.ui-u-padding-right--xxl {
+    padding-right: calc(var(--spacing--09));
+}
+
+.ui-u-padding-right--nova {
+    padding-right: calc(var(--spacing--10));
+}
+
+.ui-u-padding-right--galaxy {
+    padding-right: calc(var(--spacing--11));
+}
+
+.ui-u-padding-right--universe {
+    padding-right: calc(var(--spacing--12));
+}
+
+.ui-u-padding-right--shiva {
+    padding-right: calc(var(--spacing--13));
+}

@@ -1,0 +1,42 @@
+/* Accordion.css */
+
+/* Accordion Item */
+.ui-c-accordion-item {
+  flex-grow: 1;
+}
+.ui-c-accordion-item .ui-c-accordion-item__header {
+  margin-top: 8px;
+  /* margin-bottom: 8px; */
+  border-radius: 0px;
+}
+.ui-c-accordion-item:first-child .ui-c-accordion-item__header {
+  margin-top: 0px;
+}
+.ui-c-accordion-item:last-child .ui-c-accordion-item__header {
+  margin-bottom: 0px;
+}
+
+/* Accordion Button */
+.ui-c-accordion-item .ui-c-accordion-item__header {
+  background-color: var(--color-grey-100);
+  transition: background-color 0.2s;
+  text-align: left;
+  border: 1px solid var(--color-grey-400);
+}
+.ui-c-accordion-item .ui-c-accordion-item__header:hover {
+  background-color: var(--color-grey-200);
+}
+.ui-c-accordion-item.ui-c-accordion-item--open .ui-c-accordion-item__header {
+  background-color: var(--color-grey-300);
+}
+
+/* Accordion Content */
+.ui-c-accordion-item .ui-c-accordion-item__content {
+  border: 1px solid var(--color-grey-400);
+  border-top-width: 0px;
+  display: none;
+  transition: max-height 0.2s ease-out, max-width 0.2s ease-out;
+}
+.ui-c-accordion-item.ui-c-accordion-item--open .ui-c-accordion-item__content {
+  display: block;
+}

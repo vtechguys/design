@@ -1,0 +1,29 @@
+:root {
+    /* Spacing tokens */
+    /* 2px */
+    --spacing--01: 0.125rem;
+    /* 4px == xxs*/
+    --spacing--02: 0.25rem;
+    /* 8px == gutter*/
+    --spacing--03: 0.5rem;
+    /* 12px == xs*/
+    --spacing--04: 0.75rem;
+    /* 16px == sm */
+    --spacing--05: 1rem;
+    /* 24px == md */
+    --spacing--06: 1.5rem;
+    /* 32px == lg*/
+    --spacing--07: 2rem;
+    /* 40px == xl*/
+    --spacing--08: 2.5rem;
+    /* 48px  === xxl */
+    --spacing--09: 3rem;
+    /* 64px === nova*/
+    --spacing--10: 4rem;
+    /* 80px === galaxy*/
+    --spacing--11: 5rem;
+    /* 96px  === universe */
+    --spacing--12: 6rem;
+    /* 160px == shiva*/
+    --spacing--13: 10rem;
+}
