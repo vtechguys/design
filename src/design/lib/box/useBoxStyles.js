@@ -1,29 +1,273 @@
-import { createUseStyles } from "react-jss";
-import { classNames, resolveResponsiveProp } from "../../utils";
+import { createUseStyles } from 'react-jss';
+import { classNames, resolveResponsiveProp, resolveBreakpointUseStyleProp } from '../utils';
 
+const styleMap = {
+  sizeUnits: {
+    '100p': '100%',
+    '100vw': 'calc(100vw)',
+    '100vh': 'calc(100vh)',
+  },
+};
 
-const useDynamicBoxStyles = createUseStyles(({ 
-  flexShrink,
-  flexGrow,
-  flexBasis,
-  flexOrder: order,
-  width,
-  height,
-  maxWidth,
-  maxHeight,
-})=>({
-  box: {
-    flexShrink,
-  flexGrow,
-  flexBasis,
-  order,
-  width,
-  height,
-  maxWidth,
-  maxHeight,
+const createMediaQueryUseStyles = styleObject => {
+  const mqStyleObject = {};
+  for (const className in styleObject) {
+    if (!Object.prototype.hasOwnProperty.call(styleObject, className)) {
+      continue;
+    }
   }
-}))
+};
 
+const useDynamicBoxStyles = createUseStyles({
+  box: {
+    flexShrink: ({ flexShrink }) => flexShrink,
+    flexGrow: ({ flexGrow }) => flexGrow,
+    flexBasis: ({ flexBasis }) => flexBasis,
+    order: ({ order }) => order,
+    width: ({ width }) => (styleMap.sizeUnits[width] ? styleMap.sizeUnits[width] : width),
+    height: ({ height }) => (styleMap.sizeUnits[height] ? styleMap.sizeUnits[height] : height),
+    maxHeight: ({ maxHeight }) =>
+      styleMap.sizeUnits[maxHeight] ? styleMap.sizeUnits[maxHeight] : maxHeight,
+    maxWidth: ({ maxWidth }) =>
+      styleMap.sizeUnits[maxWidth] ? styleMap.sizeUnits[maxWidth] : maxWidth,
+    minHeight: ({ minHeight }) =>
+      styleMap.sizeUnits[minHeight] ? styleMap.sizeUnits[minHeight] : minHeight,
+    minWidth: ({ minWidth }) =>
+      styleMap.sizeUnits[minWidth] ? styleMap.sizeUnits[minWidth] : minWidth,
+  },
+  // [mediaQueries.xs]: {
+  //   box: {
+  //     flexShrink: ({ flexShrink }) => resolveBreakpointUseStyleProp(flexShrink, 'xs'),
+  //     flexGrow: ({ flexGrow }) => resolveBreakpointUseStyleProp(flexGrow, 'xs'),
+  //     flexBasis: ({ flexBasis }) => resolveBreakpointUseStyleProp(flexBasis, 'xs'),
+  //     order: ({ order }) => resolveBreakpointUseStyleProp(order, 'xs'),
+  //     width: ({ width }) =>
+  //       resolveBreakpointUseStyleProp(
+  //         styleMap.sizeUnits[width] ? styleMap.sizeUnits[width] : width,
+  //         'xs'
+  //       ),
+  //     height: ({ height }) =>
+  //       resolveBreakpointUseStyleProp(
+  //         styleMap.sizeUnits[height] ? styleMap.sizeUnits[height] : height
+  //       ),
+  //     maxHeight: ({ maxHeight }) =>
+  //       resolveBreakpointUseStyleProp(
+  //         styleMap.sizeUnits[maxHeight] ? styleMap.sizeUnits[maxHeight] : maxHeight,
+  //         'xs'
+  //       ),
+  //     maxWidth: ({ maxWidth }) =>
+  //       resolveBreakpointUseStyleProp(
+  //         styleMap.sizeUnits[maxWidth] ? styleMap.sizeUnits[maxWidth] : maxWidth,
+  //         'xs'
+  //       ),
+
+  //     minWidth: ({ minWidth }) =>
+  //       resolveBreakpointUseStyleProp(
+  //         styleMap.sizeUnits[minWidth] ? styleMap.sizeUnits[minWidth] : minWidth,
+  //         'xs'
+  //       ),
+  //     minHeight: ({ minHeight }) =>
+  //       resolveBreakpointUseStyleProp(
+  //         styleMap.sizeUnits[minHeight] ? styleMap.sizeUnits[minHeight] : minHeight,
+  //         'xs'
+  //       ),
+  //   },
+  // },
+
+  // [mediaQueries.sm]: {
+  //   box: {
+  //     flexShrink: ({ flexShrink }) => resolveBreakpointUseStyleProp(flexShrink, 'sm'),
+  //     flexGrow: ({ flexGrow }) => resolveBreakpointUseStyleProp(flexGrow, 'sm'),
+  //     flexBasis: ({ flexBasis }) => resolveBreakpointUseStyleProp(flexBasis, 'sm'),
+  //     order: ({ order }) => resolveBreakpointUseStyleProp(order, 'sm'),
+  //     width: ({ width }) =>
+  //       resolveBreakpointUseStyleProp(
+  //         styleMap.sizeUnits[width] ? styleMap.sizeUnits[width] : width,
+  //         'sm'
+  //       ),
+  //     height: ({ height }) =>
+  //       resolveBreakpointUseStyleProp(
+  //         styleMap.sizeUnits[height] ? styleMap.sizeUnits[height] : height
+  //       ),
+  //     maxHeight: ({ maxHeight }) =>
+  //       resolveBreakpointUseStyleProp(
+  //         styleMap.sizeUnits[maxHeight] ? styleMap.sizeUnits[maxHeight] : maxHeight,
+  //         'sm'
+  //       ),
+  //     maxWidth: ({ maxWidth }) =>
+  //       resolveBreakpointUseStyleProp(
+  //         styleMap.sizeUnits[maxWidth] ? styleMap.sizeUnits[maxWidth] : maxWidth,
+  //         'sm'
+  //       ),
+  //     minHeight: ({ minHeight }) =>
+  //       resolveBreakpointUseStyleProp(
+  //         styleMap.sizeUnits[minHeight] ? styleMap.sizeUnits[minHeight] : minHeight,
+  //         'sm'
+  //       ),
+  //     minWidth: ({ minWidth }) =>
+  //       resolveBreakpointUseStyleProp(
+  //         styleMap.sizeUnits[minWidth] ? styleMap.sizeUnits[minWidth] : minWidth,
+  //         'sm'
+  //       ),
+  //   },
+  // },
+
+  // [mediaQueries.md]: {
+  //   box: {
+  //     flexShrink: ({ flexShrink }) => resolveBreakpointUseStyleProp(flexShrink, 'md'),
+  //     flexGrow: ({ flexGrow }) => resolveBreakpointUseStyleProp(flexGrow, 'md'),
+  //     flexBasis: ({ flexBasis }) => resolveBreakpointUseStyleProp(flexBasis, 'md'),
+  //     order: ({ order }) => resolveBreakpointUseStyleProp(order, 'md'),
+  //     width: ({ width }) =>
+  //       resolveBreakpointUseStyleProp(
+  //         styleMap.sizeUnits[width] ? styleMap.sizeUnits[width] : width,
+  //         'md'
+  //       ),
+  //     height: ({ height }) =>
+  //       resolveBreakpointUseStyleProp(
+  //         styleMap.sizeUnits[height] ? styleMap.sizeUnits[height] : height
+  //       ),
+  //     maxHeight: ({ maxHeight }) =>
+  //       resolveBreakpointUseStyleProp(
+  //         styleMap.sizeUnits[maxHeight] ? styleMap.sizeUnits[maxHeight] : maxHeight,
+  //         'md'
+  //       ),
+  //     maxWidth: ({ maxWidth }) =>
+  //       resolveBreakpointUseStyleProp(
+  //         styleMap.sizeUnits[maxWidth] ? styleMap.sizeUnits[maxWidth] : maxWidth,
+  //         'md'
+  //       ),
+  //     minHeight: ({ minHeight }) =>
+  //       resolveBreakpointUseStyleProp(
+  //         styleMap.sizeUnits[minHeight] ? styleMap.sizeUnits[minHeight] : minHeight,
+  //         'md'
+  //       ),
+  //     minWidth: ({ minWidth }) =>
+  //       resolveBreakpointUseStyleProp(
+  //         styleMap.sizeUnits[minWidth] ? styleMap.sizeUnits[minWidth] : minWidth,
+  //         'md'
+  //       ),
+  //   },
+  // },
+  // [mediaQueries.lg]: {
+  //   box: {
+  //     flexShrink: ({ flexShrink }) => resolveBreakpointUseStyleProp(flexShrink, 'lg'),
+  //     flexGrow: ({ flexGrow }) => resolveBreakpointUseStyleProp(flexGrow, 'lg'),
+  //     flexBasis: ({ flexBasis }) => resolveBreakpointUseStyleProp(flexBasis, 'lg'),
+  //     order: ({ order }) => resolveBreakpointUseStyleProp(order, 'lg'),
+  //     width: ({ width }) =>
+  //       resolveBreakpointUseStyleProp(
+  //         styleMap.sizeUnits[width] ? styleMap.sizeUnits[width] : width,
+  //         'lg'
+  //       ),
+  //     height: ({ height }) =>
+  //       resolveBreakpointUseStyleProp(
+  //         styleMap.sizeUnits[height] ? styleMap.sizeUnits[height] : height
+  //       ),
+  //     maxHeight: ({ maxHeight }) =>
+  //       resolveBreakpointUseStyleProp(
+  //         styleMap.sizeUnits[maxHeight] ? styleMap.sizeUnits[maxHeight] : maxHeight,
+  //         'lg'
+  //       ),
+  //     maxWidth: ({ maxWidth }) =>
+  //       resolveBreakpointUseStyleProp(
+  //         styleMap.sizeUnits[maxWidth] ? styleMap.sizeUnits[maxWidth] : maxWidth,
+  //         'lg'
+  //       ),
+  //     minHeight: ({ minHeight }) =>
+  //       resolveBreakpointUseStyleProp(
+  //         styleMap.sizeUnits[minHeight] ? styleMap.sizeUnits[minHeight] : minHeight,
+  //         'lg'
+  //       ),
+  //     minWidth: ({ minWidth }) =>
+  //       resolveBreakpointUseStyleProp(
+  //         styleMap.sizeUnits[minWidth] ? styleMap.sizeUnits[minWidth] : minWidth,
+  //         'lg'
+  //       ),
+  //   },
+  // },
+
+  // ! wish if this was possible
+
+  // box: props => {
+  //   // styles obj that need to be added dynamically
+  //   const stylesObj = {};
+  //   // to be used when prop is media query aware css prop
+  //   let hasMq = false;
+  //   const mqs = {
+  //     xs: {},
+  //     sm: {},
+  //     md: {},
+  //     lg: {},
+  //   };
+
+  //   for (const style in props) {
+  //     // only direct values
+  //     if (!Object.prototype.hasOwnProperty.call(props, style)) {
+  //       continue;
+  //     }
+  //     // no need to add undefined/null values
+  //     if (props[style] === undefined || props[style] === null) {
+  //       continue;
+  //     }
+
+  //     // it is sure a media query aware pros
+  //     if (typeof props[style] !== 'object') {
+  //       stylesObj[style] = props[style];
+  //       continue;
+  //     }
+
+  //     // get prop value for all mqs
+  //     const { xs: forXs, sm: forSm, md: forMd, lg: forLg } = props[style];
+
+  //     // if value exist for given mq then add to mqs style object
+  //     // with that being present styles have mqAwareness
+  //     if (forXs) {
+  //       mqs.xs[style] = forXs;
+  //       hasMq = true;
+  //     }
+  //     if (forSm) {
+  //       mqs.sm[style] = forSm;
+  //       hasMq = true;
+  //     }
+  //     if (forMd) {
+  //       mqs.md[style] = forMd;
+  //       hasMq = true;
+  //     }
+  //     if (forLg) {
+  //       mqs.lg[style] = forLg;
+  //       hasMq = true;
+  //     }
+  //   }
+
+  //   // at this point we have recorded all mqAware styles and other styles
+
+  //   // no specaial treatment is required for mq less styles
+  //   if (!hasMq) {
+  //     return stylesObj;
+  //   }
+  //   stylesObj.color = 'green';
+  //   // for mq styles add these to style object
+  //   for (const mq in mqs) {
+  //     if (!Object.prototype.hasOwnProperty.call(mqs, mq)) {
+  //       continue;
+  //     }
+  //     // add style for same class onmq
+  //     stylesObj[mediaQueries[mq]] = { box: mqs[mq] };
+  //   }
+  //   stylesObj.backgroundColor = 'orange';
+  //   stylesObj['@media (min-width: 500px)'] = {
+  //     box: {
+  //       border: '1px solid black',
+  //     },
+  //   };
+  //   console.log(Object.entries(stylesObj));
+  //   console.log(stylesObj);
+
+  //   // return mq aware styles
+  //   return stylesObj;
+  // },
+});
 
 export function useBoxStyles({
   // use bg to create a bg-color context
@@ -52,9 +296,14 @@ export function useBoxStyles({
   justifyContent,
   alignItems,
   alignContent,
-  flexOrder,
-  width, height, maxHeight, maxWidth,
-  flexWrap
+  order,
+  width,
+  height,
+  maxHeight,
+  maxWidth,
+  minHeight,
+  minWidth,
+  flexWrap,
 }) {
   const classes = [];
 
@@ -116,7 +365,7 @@ export function useBoxStyles({
   if (elevation) {
     classes.push(resolveResponsiveProp(`ui-u-elevation`, elevation));
   }
-  // display 
+  // display
   if (display) {
     classes.push(resolveResponsiveProp(`ui-u-display`, display));
   }
@@ -125,39 +374,42 @@ export function useBoxStyles({
     classes.push(resolveResponsiveProp(`ui-u-cursor`, cursor));
   }
 
+  if (flexDirection) {
+    classes.push(resolveResponsiveProp('ui-u-flex-direction', flexDirection));
+  }
 
-  
-    if (flexDirection) {
-        classes.push(resolveResponsiveProp('ui-l-flex-direction', flexDirection));
-    }
+  if (justifyContent) {
+    classes.push(resolveResponsiveProp('ui-u-justify-content', justifyContent));
+  }
 
-    if (justifyContent) {
-        classes.push(resolveResponsiveProp('ui-l-justify-content', justifyContent))
-    }
+  if (alignContent) {
+    classes.push(resolveResponsiveProp('ui-u-align-content', alignContent));
+  }
 
-    if (alignContent) {
-        classes.push(resolveResponsiveProp('ui-l-align-content', alignContent))
-    }
+  if (alignItems) {
+    classes.push(resolveResponsiveProp('ui-u-align-items', alignItems));
+  }
 
-    if (alignItems) {
-        classes.push(resolveResponsiveProp('ui-l-align-items', alignItems))
-    }
-    
-    if (flexWrap) {
-      classes.push(resolveResponsiveProp('ui-u-flex-wrap', flexWrap))
-    }
+  if (flexWrap) {
+    classes.push(resolveResponsiveProp('ui-u-flex-wrap', flexWrap));
+  }
 
-    const dynamicBoxClasses = useDynamicBoxStyles({  
-      flexShrink,
-      flexGrow,
-      flexBasis, flexOrder,
-      width, height, maxHeight, maxWidth
-    });
+  const dynamicBoxClasses = useDynamicBoxStyles({
+    flexShrink,
+    flexGrow,
+    flexBasis,
+    order,
+    width,
+    height,
+    maxHeight,
+    maxWidth,
+    minHeight,
+    minWidth,
+  });
 
-    if (dynamicBoxClasses?.box) {
-      classes.push(dynamicBoxClasses.box)
-    }
-
+  if (dynamicBoxClasses?.box) {
+    classes.push(dynamicBoxClasses.box);
+  }
 
   // Modifier Class
   if (className) {

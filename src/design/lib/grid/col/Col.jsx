@@ -4,7 +4,7 @@ import { useColStyles } from "./useColStyles";
 import "./css/main.css"
 
 export function Col(props) {
-    const { skip = 0, span = 1, className, ...restProps } = props;
-    const classes = useColStyles({ skip, span, className })
+    const { skip = 0, span = 1, order, className, ...restProps } = props;
+    const classes = useColStyles({ skip, span, order, className })
     return <Box {...restProps} className={classes} />
 }

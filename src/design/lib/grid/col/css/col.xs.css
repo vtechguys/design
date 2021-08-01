@@ -1,92 +1,128 @@
 @media (max-width: 575px) {
-    .xs\:ui-c-col {}
-    .xs\:ui-col {
+    .xs\:ui-l-col {
         flex-grow: 1;
         flex-basis: 0;
         max-width: 100%;
     }
-    .xs\:ui-col-span--1 {
+    .xs\:ui-l-col-span--1 {
         flex-basis: 8.33333333%;
         max-width: 8.33333333%;
     }
-    .xs\:ui-col-span--2 {
+    .xs\:ui-l-col-span--2 {
         flex-basis: 16.66666667%;
         max-width: 16.66666667%;
     }
-    .xs\:ui-col-span--3 {
+    .xs\:ui-l-col-span--3 {
         flex-basis: 25%;
         max-width: 25%;
     }
-    .xs\:ui-col-span--4 {
+    .xs\:ui-l-col-span--4 {
         flex-basis: 33.33333333%;
         max-width: 33.33333333%;
     }
-    .xs\:ui-col-span--5 {
+    .xs\:ui-l-col-span--5 {
         flex-basis: 41.66666667%;
         max-width: 41.66666667%;
     }
-    .xs\:ui-col-span--6 {
+    .xs\:ui-l-col-span--6 {
         flex-basis: 50%;
         max-width: 50%;
     }
-    .xs\:ui-col-span--7 {
+    .xs\:ui-l-col-span--7 {
         flex-basis: 58.33333333%;
         max-width: 58.33333333%;
     }
-    .xs\:ui-col-span--8 {
+    .xs\:ui-l-col-span--8 {
         flex-basis: 66.66666667%;
         max-width: 66.66666667%;
     }
-    .xs\:ui-col-span--9 {
+    .xs\:ui-l-col-span--9 {
         flex-basis: 75%;
         max-width: 75%;
     }
-    .xs\:ui-col-span--10 {
+    .xs\:ui-l-col-span--10 {
         flex-basis: 83.33333333%;
         max-width: 83.33333333%;
     }
-    .xs\:ui-col-span--11 {
+    .xs\:ui-l-col-span--11 {
         flex-basis: 91.66666667%;
         max-width: 91.66666667%;
     }
-    .xs\:ui-col-span--12 {
+    .xs\:ui-l-col-span--12 {
         flex-basis: 100%;
         max-width: 100%;
     }
-    .xs\:ui-col-skip--0 {
+    .xs\:ui-l-col-skip--0 {
         margin-left: 0;
     }
-    .xs\:ui-col-skip--1 {
+    .xs\:ui-l-col-skip--1 {
         margin-left: 8.33333333%;
     }
-    .xs\:ui-col-skip--2 {
+    .xs\:ui-l-col-skip--2 {
         margin-left: 16.66666667%;
     }
-    .xs\:ui-col-skip--3 {
+    .xs\:ui-l-col-skip--3 {
         margin-left: 25%;
     }
-    .xs\:ui-col-skip--4 {
+    .xs\:ui-l-col-skip--4 {
         margin-left: 33.33333333%;
     }
-    .xs\:ui-col-skip--5 {
+    .xs\:ui-l-col-skip--5 {
         margin-left: 41.66666667%;
     }
-    .xs\:ui-col-skip--6 {
+    .xs\:ui-l-col-skip--6 {
         margin-left: 50%;
     }
-    .xs\:ui-col-skip--7 {
+    .xs\:ui-l-col-skip--7 {
         margin-left: 58.33333333%;
     }
-    .xs\:ui-col-skip--8 {
+    .xs\:ui-l-col-skip--8 {
         margin-left: 66.66666667%;
     }
-    .xs\:ui-col-skip--9 {
+    .xs\:ui-l-col-skip--9 {
         margin-left: 75%;
     }
-    .xs\:ui-col-skip--10 {
+    .xs\:ui-l-col-skip--10 {
         margin-left: 83.33333333%;
     }
-    .xs\:ui-col-skip--11 {
+    .xs\:ui-l-col-skip--11 {
         margin-left: 91.66666667%;
+    }
+    /* order columns */
+    .xs\:ui-l-col-order--1 {
+        order: 1;
+    }
+    .xs\:ui-l-col-order--2 {
+        order: 2
+    }
+    .xs\:ui-l-col-order--3 {
+        order: 3
+    }
+    .xs\:ui-l-col-order--4 {
+        order: 4
+    }
+    .xs\:ui-l-col-order--5 {
+        order: 5
+    }
+    .xs\:ui-l-col-order--6 {
+        order: 6
+    }
+    .xs\:ui-l-col-order--7 {
+        order: 7
+    }
+    .xs\:ui-l-col-order--8 {
+        order: 8
+    }
+    .xs\:ui-l-col-order--9 {
+        order: 9
+    }
+    .xs\:ui-l-col-order--10 {
+        order: 10
+    }
+    .xs\:ui-l-col-order--11 {
+        order: 11
+    }
+    .xs\:ui-l-col-order--12 {
+        order: 12
     }
 }

@@ -1,15 +1,15 @@
-import { classNames, resolveResponsiveProp } from "../../../utils";
+import { classNames, resolveResponsiveProp } from '../../utils';
 
 export function useContainerStyles({ mode, className }) {
-    const classes = ['ui-c-container',];
+  const classes = ['ui-c-container', ''];
 
-    if (mode) {
-        classes.push(resolveResponsiveProp('ui-l-container-mode', mode))
-    }
+  if (mode) {
+    classes.push(resolveResponsiveProp('ui-l-container-mode', mode));
+  }
 
-    if (className) {
-        classes.push(className);
-    }
+  if (className) {
+    classes.push(className);
+  }
 
-    return classNames(classes)
+  return classNames(classes);
 }

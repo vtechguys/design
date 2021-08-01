@@ -6,5 +6,5 @@ import "./css/main.css";
 
 export function Row(props) {
     const classes = useRowStyles(props);
-    return <Box {...props} display="flex" flexDirection="row" flexGrow={1} flexShrink={1} flexBasis="auto" flexWrap="wrap" className={classes} />
+    return <Box {...props} display="flex" flexDirection="row" flexGrow={0} flexShrink={1} flexBasis="auto" flexWrap="wrap" className={classes} />
 }
