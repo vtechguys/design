@@ -69,3 +69,7 @@
 .div-bg--plum {
   background-color: plum;
 }
+
+div[data-region-name="AppBody"] {
+  background-color: #f3f1f1;
+}

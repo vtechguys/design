@@ -1,7 +1,7 @@
 import './design/design.css';
 import './App.css';
 
-import { Col, Row, Container, Box, mediaQueries } from './design';
+import { Col, Row, Container, Box, Column } from './design';
 // App css
 import './App.css';
 
@@ -29,16 +29,18 @@ const StyleSheet = {
   },
   AppBody: {
     width: '100p',
-    my: 'md',
-    Panel: {
-      span: {
-        xs: 12,
-        sm: 12,
-        md: 6,
-        lg: 6,
-      },
-      minHeight: 400,
+    py: 'md',
+  },
+  PaneContainer: {
+    span: {
+      xs: 12,
+      sm: 12,
+      md: 6,
+      lg: 6,
     },
+  },
+  Pane: {
+    minHeight: 200,
   },
 };
 
@@ -112,19 +114,37 @@ function App() {
           </Row>
         </Container>
       </Box>
-      <Box dataRegionName="AppBody" width={StyleSheet.AppBody.width} my={StyleSheet.AppBody.my}>
-        <Container mode="fixed">
+      <Box dataRegionName="AppBody" width={StyleSheet.AppBody.width} py={StyleSheet.AppBody.py}>
+        <Container mode="fixed" elevation="pop-out">
           <Row>
-            <Col span={StyleSheet.AppBody.Panel.span} className="div-bg--brown">
+            <Col span={StyleSheet.PaneContainer.span}>
               {/* ! FIND A WAY TO MAKE minHeight and maxHeight a responsive props */}
-              <Box py="sm" px="md" minHeight={StyleSheet.AppBody.Panel.minHeight}>
-                Input
-              </Box>
+              <Container minHeight={StyleSheet.Pane.minHeight}>
+                <Row
+                  justifyContent="space-between"
+                  dataRegionName="InputBox"
+                  minHeight={StyleSheet.Pane.minHeight}>
+                  <Col span={12}>Top Nav</Col>
+                  <Col span={12} flexGrow={1}>
+                    <Box>content</Box>
+                  </Col>
+                  <Col span={12}>
+                    <Row>
+                      <Col span={8}>0Words</Col>
+                      <Col span={4}>Submit</Col>
+                    </Row>
+                  </Col>
+                </Row>
+              </Container>
             </Col>
-            <Col span={StyleSheet.AppBody.Panel.span} className="div-bg--aqua">
-              <Box py="sm" px="md" minHeight={StyleSheet.AppBody.Panel.minHeight}>
-                Output
-              </Box>
+            <Col span={StyleSheet.PaneContainer.span}>
+              <Container>
+                <Row>
+                  <Col span={12}>Top Nav 2</Col>
+                  <Col span={12}> Content 2</Col>
+                  <Col span={12}> Bottom NAv</Col>
+                </Row>
+              </Container>
             </Col>
           </Row>
         </Container>
