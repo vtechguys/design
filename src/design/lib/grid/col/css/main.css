@@ -2,10 +2,7 @@
 @import url("./col.sm.css") (min-width: 576px) and (max-width: 767px);
 @import url("./col.md.css") (min-width: 768px) and (max-width: 991px);
 @import url("./col.lg.css") (min-width: 992px);
-.ui-c-col {
-    padding-left: var(--layout-half-gutter);
-    padding-right: var(--layout-half-gutter);
-}
+.ui-c-col {}
 
 .ui-col {
     flex-grow: 1;
@@ -115,4 +112,8 @@
 
 .ui-col-skip--10 {
     margin-left: 83.33333333%;
+}
+
+.ui-col-skip--11 {
+    margin-left: 91.66666667%;
 }

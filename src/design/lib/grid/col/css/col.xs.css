@@ -1,8 +1,5 @@
 @media (max-width: 575px) {
-    .xs\:ui-c-col {
-        padding-left: var(--layout-half-gutter);
-        padding-right: var(--layout-half-gutter);
-    }
+    .xs\:ui-c-col {}
     .xs\:ui-col {
         flex-grow: 1;
         flex-basis: 0;
@@ -88,5 +85,8 @@
     }
     .xs\:ui-col-skip--10 {
         margin-left: 83.33333333%;
+    }
+    .xs\:ui-col-skip--11 {
+        margin-left: 91.66666667%;
     }
 }

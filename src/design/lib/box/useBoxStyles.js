@@ -1,4 +1,29 @@
+import { createUseStyles } from "react-jss";
 import { classNames, resolveResponsiveProp } from "../../utils";
+
+
+const useDynamicBoxStyles = createUseStyles(({ 
+  flexShrink,
+  flexGrow,
+  flexBasis,
+  flexOrder: order,
+  width,
+  height,
+  maxWidth,
+  maxHeight,
+})=>({
+  box: {
+    flexShrink,
+  flexGrow,
+  flexBasis,
+  order,
+  width,
+  height,
+  maxWidth,
+  maxHeight,
+  }
+}))
+
 
 export function useBoxStyles({
   // use bg to create a bg-color context
@@ -19,7 +44,17 @@ export function useBoxStyles({
   py,
   cursor,
   display,
-  elevation
+  elevation,
+  flexDirection,
+  flexShrink,
+  flexGrow,
+  flexBasis,
+  justifyContent,
+  alignItems,
+  alignContent,
+  flexOrder,
+  width, height, maxHeight, maxWidth,
+  flexWrap
 }) {
   const classes = [];
 
@@ -90,11 +125,44 @@ export function useBoxStyles({
     classes.push(resolveResponsiveProp(`ui-u-cursor`, cursor));
   }
 
+
+  
+    if (flexDirection) {
+        classes.push(resolveResponsiveProp('ui-l-flex-direction', flexDirection));
+    }
+
+    if (justifyContent) {
+        classes.push(resolveResponsiveProp('ui-l-justify-content', justifyContent))
+    }
+
+    if (alignContent) {
+        classes.push(resolveResponsiveProp('ui-l-align-content', alignContent))
+    }
+
+    if (alignItems) {
+        classes.push(resolveResponsiveProp('ui-l-align-items', alignItems))
+    }
+    
+    if (flexWrap) {
+      classes.push(resolveResponsiveProp('ui-u-flex-wrap', flexWrap))
+    }
+
+    const dynamicBoxClasses = useDynamicBoxStyles({  
+      flexShrink,
+      flexGrow,
+      flexBasis, flexOrder,
+      width, height, maxHeight, maxWidth
+    });
+
+    if (dynamicBoxClasses?.box) {
+      classes.push(dynamicBoxClasses.box)
+    }
+
+
   // Modifier Class
   if (className) {
     classes.push(className);
   }
 
-  console.log(classes, className)
   return classNames(classes);
 }

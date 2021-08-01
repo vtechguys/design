@@ -21,6 +21,6 @@ export function resolveResponsiveProp(prefixClassName, prop) {
     return classes;
   }
   export function classNames(classes, joinBy = " ") {
-    return Array.from(new Set(classes)).join(joinBy).trim();
+    return Array.from(new Set(classes)).map(className=>className.trim()).filter(Boolean).join(joinBy).trim();
   }
   

@@ -1,5 +1,17 @@
 @media (min-width: 768px) and (max-width: 991px) {
     /* pading */
+    .md\:ui-u-margin-left--auto {
+        margin-left: auto
+    }
+    .md\:ui-u-margin-right--auto {
+        margin-right: auto
+    }
+    .md\:ui-u-margin-top--auto {
+        margin-top: auto
+    }
+    .md\:ui-u-margin-bottom--auto {
+        margin-bottom: auto
+    }
     .md\:ui-u-margin--xxs {
         margin: calc(var(--spacing--02));
     }

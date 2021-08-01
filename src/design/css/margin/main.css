@@ -4,6 +4,22 @@
 @import url("./margin.lg.css") (min-width: 992px);
 /* margin */
 
+.ui-u-margin-left--auto {
+    margin-left: auto
+}
+
+.ui-u-margin-right--auto {
+    margin-right: auto
+}
+
+.ui-u-margin-top--auto {
+    margin-top: auto
+}
+
+.ui-u-margin-bottom--auto {
+    margin-bottom: auto
+}
+
 .ui-u-margin--xxs {
     margin: calc(var(--spacing--02));
 }

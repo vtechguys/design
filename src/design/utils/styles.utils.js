@@ -1,6 +1,6 @@
 export function resolveResponsiveProp(prefixClassName, prop) {
   if (typeof prop !== "object") {
-    return `xs:${prefixClassName}--${prop}`;
+    return `${prefixClassName}--${prop}`;
   }
   let classes = "";
   if (prop.xs) {

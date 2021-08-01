@@ -29,6 +29,15 @@ export function Box(props) {
     px,
     py,
     overflow,
+    flexDirection,
+    flexShrink,
+    flexGrow,
+    flexBasis,
+    justifyContent,
+    alignItems,
+    alignContent,
+    flexOrder,
+    flexWrap,
     ...componentProps
   } = props;
   // css classes to be added
@@ -52,6 +61,15 @@ export function Box(props) {
     px,
     py,
     overflow,
+    flexDirection,
+    flexShrink,
+    flexGrow,
+    flexBasis,
+    justifyContent,
+    alignItems,
+    alignContent,
+    flexOrder,
+    flexWrap,
   });
 
   // className

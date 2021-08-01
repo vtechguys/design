@@ -1,5 +1,17 @@
 @media (min-width: 992px) {
     /* margin */
+    .lg\:ui-u-margin-left--auto {
+        margin-left: auto
+    }
+    .lg\:ui-u-margin-right--auto {
+        margin-right: auto
+    }
+    .lg\:ui-u-margin-top--auto {
+        margin-top: auto
+    }
+    .lg\:ui-u-margin-bottom--auto {
+        margin-bottom: auto
+    }
     .lg\:ui-u-margin--xxs {
         margin: calc(var(--spacing--02));
     }

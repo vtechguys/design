@@ -1,8 +1,5 @@
 @media (min-width: 768px) and (max-width: 991px) {
-    .md\:ui-c-col {
-        padding-left: var(--layout-half-gutter);
-        padding-right: var(--layout-half-gutter);
-    }
+    .md\:ui-c-col {}
     .md\:ui-col {
         flex-grow: 1;
         flex-basis: 0;
@@ -88,5 +85,8 @@
     }
     .md\:ui-col-skip--10 {
         margin-left: 83.33333333%;
+    }
+    .md\:ui-col-skip--11 {
+        margin-left: 91.66666667%;
     }
 }

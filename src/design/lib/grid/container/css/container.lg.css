@@ -1,0 +1,5 @@
+@media (min-width: 992px) {
+    .ui-c-container.ui-l-container-mode--fixed {
+        max-width: 960px;
+    }
+}

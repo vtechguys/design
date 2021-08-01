@@ -10,8 +10,17 @@
 @import url("./media-query.css");
 @import url("./colors.css");
 @import url("./spacing.css");
-/* Utility.css */
+/* Utility.css following require above tokens to work */
+
+/* padding -- use spaace tokens */
 
 @import url("./padding/main.css");
+/* margin -- use space token */
+
 @import url("./margin/main.css");
+/* evevation */
+
 @import url("./elevation/main.css");
+/* Layout */
+
+@import url("./layout/main.css");

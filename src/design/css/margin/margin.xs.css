@@ -1,4 +1,16 @@
 @media (max-width: 575px) {
+    .xs\:ui-u-margin-left--auto {
+        margin-left: auto
+    }
+    .xs\:ui-u-margin-right--auto {
+        margin-right: auto
+    }
+    .xs\:ui-u-margin-top--auto {
+        margin-top: auto
+    }
+    .xs\:ui-u-margin-bottom--auto {
+        margin-bottom: auto
+    }
     .xs\:ui-u-margin--xxs {
         margin: calc(var(--spacing--02));
     }
