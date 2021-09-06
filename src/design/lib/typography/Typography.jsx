@@ -1,23 +1,12 @@
-// import { createElement } from "react";
+import './Typography.css';
+import { useTypogrphyStyles } from './useTypographyStyles';
+import { createElement } from 'react';
 
-// import "./Typography.css";
-
-// export function Typography({
-//   component,
-//   variant,
-//   className,
-//   dataTestId,
-//   ...props
-// }) {
-//   return createDesignElement(component, {
-//     ...props,
-//     className: `${variant} ${className}`.trim(),
-//   });
-// }
-// Typography.defaultProps = {
-//   component: "p",
-//   className: "",
-//   dataComponentName: "UI-Typography",
-//   dataTestId: "",
-//   variant: "body1",
-// };
+export function Typography(props) {
+  const { component, variant, className, ...restProps } = props;
+  const classes = useTypogrphyStyles(props);
+  if (classes) {
+    restProps.className = classes;
+  }
+  return createElement(component, restProps);
+}
